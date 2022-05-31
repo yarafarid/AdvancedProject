@@ -2,15 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package project;
+package excelread;
 
 /**
  *
  * @author Yara Farid
  */
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 
-public class Operation {
+public class Operation extends Service {
 
     private final int LEVEL = 0;
 
@@ -34,12 +37,12 @@ public class Operation {
         } else {
             addToExistingTree(field);
         }
-        System.out.println(Arrays.toString(field.getPath()));
+      //  System.out.println(Arrays.toString(field.getPath()));
     }
 
     private void addToExistingTree(Field field) {
         String rootName = field.getFieldByLevel(LEVEL);
-        System.out.println("root name "+rootName);
+       // System.out.println("root name "+rootName);
         ObjectField root = findObjectRoot(rootName);
         root.addField(field, 1);
     }
@@ -52,4 +55,5 @@ public class Operation {
         }
         return null;
     }
+    
 }

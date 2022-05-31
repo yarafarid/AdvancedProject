@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package project;
+package excelread;
+
+
 
 /**
  *
@@ -10,13 +12,15 @@ package project;
  */
 public class Field {
     
-    private boolean input;
+    private String input;
     private String name;
     private String type;
-    private boolean mandatory;
+    private String mandatory;
     private String[] path;
     
-    public Field(boolean input, String name, String type, boolean mandatory) {
+
+     
+    public Field(String input, String name, String type, String mandatory) {
         this.input = input;
         this.name = name;
         this.type = type;
@@ -28,7 +32,8 @@ public class Field {
         }
     }
     
-    public boolean isInput() {
+    
+    public String isInput() {
         return input;
     }
     
@@ -48,7 +53,7 @@ public class Field {
         return path;
     }
     
-    public boolean isMandatory() {
+    public String isMandatory() {
         return mandatory;
     }
     
@@ -60,7 +65,7 @@ public class Field {
         return path.length == 0;
     }
     
-    public void setInput(boolean input) {
+    public void setInput(String input) {
         this.input = input;
     }
     
@@ -72,8 +77,9 @@ public class Field {
         this.type = type;
     }
     
-    public void setMandatory(boolean mandatory) {
+    public void setMandatory(String mandatory) {
         this.mandatory = mandatory;
     }
+ 
     
 }

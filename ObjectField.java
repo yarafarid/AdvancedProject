@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package project;
+package excelread;
 
 /**
  *
@@ -14,7 +14,7 @@ public class ObjectField extends Field {
 
     ArrayList<Field> children;
 
-    public ObjectField(boolean isInput, String name, String type, boolean isMandatory) {
+    public ObjectField(String isInput, String name, String type, String isMandatory) {
         super(isInput, name, type, isMandatory);
         children = new ArrayList<Field>();
     }
